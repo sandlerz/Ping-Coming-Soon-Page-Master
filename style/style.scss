@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+@import "global";
+@import "variables";
+
+body{
+  font-family: $font;
+
+}
+
+header{
+
+  img{
+  max-width: 85px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+  }
+
+  h1{
+    font-weight: 300;
+    font-size: 5rem;
+    color: $Gray;
+    margin: 0;
+    b{
+      color: $VeryDarkBlue;
+    }
+  }
+  
+  p{
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 20px  0 40px;
+  }
+}
+form{
+  margin-bottom: 90px;
+
+  [type="email"]{
+    width: 420px;
+    padding: 13px 30px;
+    border-radius: 30px;
+    border: 1px $PaleBlue solid;
+    margin-right: 16px;
+  }
+
+  [type=submit]{
+    padding: 14px 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: $Blue;
+    color: white;
+  }
+}
+.illustration{
+  max-width: 640px;
+  width: 100%;
+  height: auto;
+}
