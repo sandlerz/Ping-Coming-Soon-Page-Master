@@ -4,7 +4,6 @@
 
 body{
   font-family: $font;
-
 }
 
 header{
@@ -13,12 +12,12 @@ header{
   max-width: 85px;
   width: 100%;
   height: auto;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   }
 
   h1{
     font-weight: 300;
-    font-size: 5rem;
+    font-size: 4.8rem;
     color: $Gray;
     margin: 0;
     b{
@@ -27,32 +26,72 @@ header{
   }
   
   p{
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 400;
-    margin: 20px  0 40px;
+    margin: 18px  0 40px;
   }
 }
+
 form{
   margin-bottom: 90px;
 
-  [type="email"]{
+  #email{
+    font-size: 1.5rem;
     width: 420px;
-    padding: 13px 30px;
+    padding: 20px 30px;
     border-radius: 30px;
     border: 1px $PaleBlue solid;
     margin-right: 16px;
   }
 
-  [type=submit]{
-    padding: 14px 60px;
+  #email::placeholder{
+    color: $PaleBlue;
+  }
+
+  #submit{
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 20px 70px;
     border-radius: 30px;
     border: none;
     background-color: $Blue;
     color: white;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px 1px $PaleBlue;
+  }
+  #submit:hover{
+    background-color: hsl(223, 81%, 69%);
   }
 }
+
 .illustration{
   max-width: 640px;
   width: 100%;
   height: auto;
+  margin-bottom: 60px;
+}
+
+footer{
+  div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    a{
+      color: $Blue;
+      margin: 0 10px;
+      border: 0.5px solid $PaleBlue;
+      border-radius: 50%;
+      padding: 7px;
+      justify-items: center;
+      line-height: 1px;
+    }
+    a:hover{
+      background-color: $Blue;
+      color: white;
+    }
+  }
+  p{
+    color: $Gray;
+    font-size: 1.3rem;
+  }
 }
