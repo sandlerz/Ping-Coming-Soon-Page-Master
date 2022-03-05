@@ -6,8 +6,8 @@ body{
   font-family: $font;
 }
 
-header{
 
+header{
   img{
   max-width: 85px;
   width: 100%;
@@ -19,7 +19,6 @@ header{
     font-weight: 300;
     font-size: 4.8rem;
     color: $Gray;
-    margin: 0;
     b{
       color: $VeryDarkBlue;
     }
@@ -28,30 +27,42 @@ header{
   p{
     font-size: 2rem;
     font-weight: 400;
-    margin: 18px  0 40px;
+    margin: 18px 0 40px;
   }
 }
 
 form{
-  margin-bottom: 90px;
+  margin-bottom: 80px;
+  display: flex;
+  gap: 16px;
 
   #email{
     font-size: 1.5rem;
     width: 420px;
     padding: 20px 30px;
+    height: 60px;
     border-radius: 30px;
     border: 1px $PaleBlue solid;
-    margin-right: 16px;
+  }
+
+  #email:focus::placeholder{
+    color: transparent;
   }
 
   #email::placeholder{
     color: $PaleBlue;
+    transition: color 0.5s ease-in;
   }
 
+  #email:focus{
+    outline: $Blue 1px solid;
+  }
+  
   #submit{
     font-size: 1.5rem;
     font-weight: 400;
     padding: 20px 70px;
+    height: 60px;
     border-radius: 30px;
     border: none;
     background-color: $Blue;
@@ -64,10 +75,20 @@ form{
   }
 }
 
+#error{
+  color: $LightRed;
+  text-align: left;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin: 4px 0 0 25px;
+  position: absolute;
+}
+
 .illustration{
   max-width: 640px;
   width: 100%;
   height: auto;
+  padding: 0 40px;
   margin-bottom: 60px;
 }
 
@@ -93,5 +114,44 @@ footer{
   p{
     color: $Gray;
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 46.875em){
+  body{
+    padding: 20px;
+  }
+  header{
+    img{
+    max-width: 70px;
+    }
+  
+    h1{
+      font-size: 3rem;
+    }
+    
+    p{
+      font-size: 1.8rem;
+    }
+  }
+  form{
+    flex-direction: column;
+    padding: 0 20px;
+  
+    #email{
+      width: 80%;
+      padding: 15px 30px;
+      margin: auto;
+    }
+    #submit{
+      width: 80%;
+      padding: 15px 70px;
+      margin: auto;
+    }
+  }
+  #error{
+    text-align: center;
+    margin: 6px 0 10px 0;
+    position: relative;
   }
 }

@@ -8,13 +8,13 @@ html {
 *, *::before, *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
-  margin: 0;
-  padding: 0;
   display: -ms-grid;
   display: grid;
   place-content: center;
@@ -41,7 +41,6 @@ header h1 {
   font-weight: 300;
   font-size: 4.8rem;
   color: #969696;
-  margin: 0;
 }
 
 header h1 b {
@@ -51,42 +50,75 @@ header h1 b {
 header p {
   font-size: 2rem;
   font-weight: 400;
-  margin: 18px  0 40px;
+  margin: 18px 0 40px;
 }
 
 form {
-  margin-bottom: 90px;
+  margin-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
 }
 
 form #email {
   font-size: 1.5rem;
   width: 420px;
   padding: 20px 30px;
+  height: 60px;
   border-radius: 30px;
   border: 1px #c2d3ff solid;
-  margin-right: 16px;
+}
+
+form #email:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+form #email:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+form #email:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+form #email:focus::placeholder {
+  color: transparent;
 }
 
 form #email::-webkit-input-placeholder {
   color: #c2d3ff;
+  -webkit-transition: color 0.5s ease-in;
+  transition: color 0.5s ease-in;
 }
 
 form #email:-ms-input-placeholder {
   color: #c2d3ff;
+  -webkit-transition: color 0.5s ease-in;
+  transition: color 0.5s ease-in;
 }
 
 form #email::-ms-input-placeholder {
   color: #c2d3ff;
+  -webkit-transition: color 0.5s ease-in;
+  transition: color 0.5s ease-in;
 }
 
 form #email::placeholder {
   color: #c2d3ff;
+  -webkit-transition: color 0.5s ease-in;
+  transition: color 0.5s ease-in;
+}
+
+form #email:focus {
+  outline: #4f7df3 1px solid;
 }
 
 form #submit {
   font-size: 1.5rem;
   font-weight: 400;
   padding: 20px 70px;
+  height: 60px;
   border-radius: 30px;
   border: none;
   background-color: #4f7df3;
@@ -100,10 +132,20 @@ form #submit:hover {
   background-color: #7094f0;
 }
 
+#error {
+  color: #ff5263;
+  text-align: left;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin: 4px 0 0 25px;
+  position: absolute;
+}
+
 .illustration {
   max-width: 640px;
   width: 100%;
   height: auto;
+  padding: 0 40px;
   margin-bottom: 60px;
 }
 
@@ -135,5 +177,42 @@ footer div a:hover {
 footer p {
   color: #969696;
   font-size: 1.3rem;
+}
+
+@media (max-width: 46.875em) {
+  body {
+    padding: 20px;
+  }
+  header img {
+    max-width: 70px;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
+  header p {
+    font-size: 1.8rem;
+  }
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 20px;
+  }
+  form #email {
+    width: 80%;
+    padding: 15px 30px;
+    margin: auto;
+  }
+  form #submit {
+    width: 80%;
+    padding: 15px 70px;
+    margin: auto;
+  }
+  #error {
+    text-align: center;
+    margin: 6px 0 10px 0;
+    position: relative;
+  }
 }
 /*# sourceMappingURL=style.css.map */

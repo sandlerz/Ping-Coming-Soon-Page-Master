@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/css/style.css">
+  <script src="script/script.js" defer></script>
   <title>Ping Comming Soon Page</title>
 </head>
 <body>
@@ -14,16 +15,20 @@
       <h1>We are launching <b>soon!</b></h1>
       <p>Subcribe and get notified</p>
     </header>
-    <form id="form1" action="">
-      <input type="email" name="email" placeholder="Your email address..." id="email" required>
+    <form action="/" method="GET" id="form" autocomplete="off">
+      <div>
+        <label for="email"></label>
+        <input type="text" name="email" id="email" placeholder="Your email address...">
+        <p id="error" hidden="true">Please provide a valid email address</p>
+      </div>
       <input type="submit" id="submit" value="Notify Me">
     </form>
     <img class="illustration" src="images/illustration-dashboard.png" alt="">
     <footer>
       <div>
-        <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
-        <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
-        <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
       </div>
       <p>&copy; Copyright Ping. All rights reserved.</p>
     </footer>
