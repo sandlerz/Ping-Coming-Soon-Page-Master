@@ -3,7 +3,7 @@ const email = document.getElementById('email');
 const error = document.getElementById('error');
 
 form.addEventListener('submit', x => {
-  let regEx = /\w+\@{1}[a-zA-Z1-9]+\.\w+$/;
+  let regEx = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
   if(email.value === '' || email.value == null){
     x.preventDefault()
