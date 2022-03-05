@@ -15,6 +15,15 @@ form.addEventListener('submit', x => {
     x.preventDefault()
     error.style.display = 'block';
     email.style.borderColor = 'hsl(354, 100%, 66%)';
+    email.value = '';
+  }
+  if(regEx.test(email.value)) {
+    x.preventDefault()
+    error.innerHTML = 'Send';
+    error.style.display = 'block';
+    error.style.color = 'green';
+    email.value = '';
+    email.placeholder = 'Email Send';
   }
 })
 

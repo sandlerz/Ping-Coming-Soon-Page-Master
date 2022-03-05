@@ -168,6 +168,10 @@ footer div a {
   padding: 7px;
   justify-items: center;
   line-height: 1px;
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 footer div a:hover {
