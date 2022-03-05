@@ -7,17 +7,18 @@ form.addEventListener('submit', x => {
 
   if(email.value === '' || email.value == null){
     x.preventDefault()
-    error.hidden = false;
+    error.style.display = 'block';
     email.style.borderColor = 'hsl(354, 100%, 66%)';
+    email.placeholder = 'Provie a email address';
   }
   if(!(regEx.test(email.value))){
     x.preventDefault()
-    error.hidden = false;
+    error.style.display = 'block';
     email.style.borderColor = 'hsl(354, 100%, 66%)';
   }
 })
 
 email.onclick = () => {
   email.style.borderColor = 'hsl(223, 100%, 88%)';
-  error.hidden = true;
+  error.style.display = 'none';
 }

@@ -139,6 +139,7 @@ form #submit:hover {
   font-style: italic;
   margin: 4px 0 0 25px;
   position: absolute;
+  display: none;
 }
 
 .illustration {
